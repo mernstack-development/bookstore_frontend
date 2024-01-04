@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+.body{
+  font-size: 50px;
+  font-family: 'Dosis', sans-serif;
+  text-transform: capitalize;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body fieldset{
+  width: 55rem;
+  padding: 10px;
+  margin:auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+fieldset legend {
+  margin-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+fieldset > tr{
+  font-size: 30px;
+}
+
+fieldset > tr > td{
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+}
+
+fieldset > tr > td > input{
+  height: 2.5rem;
+  width: 35rem;
+  font-size: 20px;
+  font-family: 'Dosis', sans-serif;
+  color:black;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+fieldset > tr > td:nth-last-child(n){
+  padding-bottom: 15px;
+}
+
+fieldset .button{
+  height: 3.5rem;
+  width: 15rem;
+  font-family: 'Dosis', sans-serif;
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  background-color: lightgreen;
+  margin-left: 11.5rem;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+fieldset .button:hover{
+  font-weight: 700;
+  color:black;
+}
