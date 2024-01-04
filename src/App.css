@@ -68,3 +68,67 @@ fieldset .button:hover{
   font-weight: 700;
   color:black;
 }
+
+/* View book section */
+
+table{
+  margin:auto;
+  width: 90%;
+  padding-right: 5rem;
+}
+
+.tableheading td{
+  font-size: 40px;
+  border-bottom: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.tableheading td:nth-child(1){
+  width: 60rem;
+}
+
+.tableheading td:nth-child(2){
+  width: 40rem;
+}
+
+.tableheading td:nth-child(3){
+  width: 15rem;
+}
+
+.tableheading td:nth-child(5){
+  text-align: center;
+}
+
+.tabledata{
+  font-size: 30px;
+}
+
+tr:nth-child(even) {
+  background-color: antiquewhite;
+}
+
+.actionbutton .edit{
+  text-transform: uppercase;
+  text-decoration: none;
+  color:orange;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.actionbutton .edit:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.actionbutton .delete{
+  text-transform: uppercase;
+  text-decoration: none;
+  color:red;
+  font-weight: normal;
+  float:right;
+  margin-right: 10px;
+}
+.actionbutton .delete:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
