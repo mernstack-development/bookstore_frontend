@@ -3,7 +3,6 @@
 .body{
   font-size: 50px;
   font-family: 'Dosis', sans-serif;
-  text-transform: capitalize;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -55,7 +54,6 @@ fieldset .button{
   font-family: 'Dosis', sans-serif;
   color: black;
   font-size: 25px;
-  text-transform: capitalize;
   background-color: lightgreen;
   margin-left: 11.5rem;
   margin-bottom: 5px;
@@ -69,7 +67,105 @@ fieldset .button:hover{
   color:black;
 }
 
-/* View book section */
+.buttons{
+  display: block;
+  align-items: center;
+  margin-left: 12.5rem;
+}
+
+.savebook,.showallbooks{
+  margin-left:1rem;
+  margin-bottom: .5rem;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  height:auto;
+  width:auto;
+  font-family: 'Dosis', sans-serif;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.savebook{
+  background-color: lightgreen;
+}
+
+.savebook:hover{
+  font-weight: bold;
+  border:1px solid black
+}
+
+.showallbooks{
+  background-color: lightskyblue;
+}
+
+.showallbooks:hover{
+  font-weight: bold;
+  border:1px solid black
+}
+
+/* View all books section */
+
+.Addnewbook{
+  margin-left:8rem;
+  margin-bottom: .5rem;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  height:auto;
+  width:auto;
+  font-family: 'Dosis', sans-serif;
+  background-color: lightgreen;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 15px;
+  border-radius: 35px;
+}
+
+.Addnewbook:hover{
+  cursor:pointer;
+  font-weight: 700;
+}
+
+.actionbutton{
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewbook,.editbook,.deletebook{
+      margin-left: 25px;
+      font-size: 22px;
+      width: 80px;
+      outline: none;
+      border: none;
+      border-radius: 35px;
+      font-family: 'Dosis', sans-serif;
+}
+
+.viewbook:hover,.editbook:hover,.deletebook:hover{
+  cursor:pointer;
+  font-weight: 700;
+}
+
+.viewbook{
+  background-color: lightskyblue;
+}
+
+.editbook{
+  background-color: yellow;
+}
+
+.deletebook{
+  background-color:lightcoral;
+}
+
+
 
 table{
   margin:auto;
@@ -80,7 +176,6 @@ table{
 .tableheading td{
   font-size: 40px;
   border-bottom: 1px solid black;
-  background-color: antiquewhite;
 }
 
 .tableheading td:nth-child(1){
@@ -88,11 +183,11 @@ table{
 }
 
 .tableheading td:nth-child(2){
-  width: 40rem;
+  width: 35rem;
 }
 
 .tableheading td:nth-child(3){
-  width: 15rem;
+  width: 10rem;
 }
 
 .tableheading td:nth-child(5){
@@ -103,32 +198,68 @@ table{
   font-size: 30px;
 }
 
-tr:nth-child(even) {
-  background-color: antiquewhite;
+
+/* Viewbook.js */
+.bookdatagrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 3rem;
 }
 
-.actionbutton .edit{
-  text-transform: uppercase;
-  text-decoration: none;
-  color:orange;
-  font-weight: normal;
-  margin-left: 10px;
+.gridimage{
+  margin-left: 5rem;
+  height: auto;
+}
+.gridimage img{
+  height: auto;
+  min-height: 70rem;
+  width: 60rem;
 }
 
-.actionbutton .edit:hover{
+
+.bookdata{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-right: 65rem;
+  width:90%;
+  height: auto;
+  margin-left: 2rem;
+}
+
+.bookdata .header, .data{
+  font-size: 2.8rem;
+}
+
+.bookdata .data{
+  font-weight: 610;
+  color:black
+}
+
+.buttonGrid{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  margin-bottom: 15px;
+}
+
+.backtoallbooks{
+  margin-left:8rem;
+  margin-bottom: .5rem;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  height:auto;
+  width:auto;
+  font-family: 'Dosis', sans-serif;
+  background-color: lightgoldenrodyellow;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 15px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.backtoallbooks:hover{
   font-weight: bold;
-  text-decoration: underline;
 }
 
-.actionbutton .delete{
-  text-transform: uppercase;
-  text-decoration: none;
-  color:red;
-  font-weight: normal;
-  float:right;
-  margin-right: 10px;
-}
-.actionbutton .delete:hover{
-  font-weight: bold;
-  text-decoration: underline;
-}

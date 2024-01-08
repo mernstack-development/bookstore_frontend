@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
     const AllBook = () => {
     //Creating new state
     const [ bookData, setBookData ] = useState([])
@@ -26,16 +27,20 @@ import axios from 'axios'
 
   return (
     <div className='body'>
+        <Link to={'addbooks'}>
+            <button className='Addnewbook'>Create new book</button>
+        </Link>
+        
         <table>
             <tr className='tableheading'>
                 <td>
-                    name
+                    Name
                 </td>
                 <td>
-                    autor
+                    Author
                 </td>
                 <td>
-                    price
+                    Price
                 </td>
                 <td>
                     Status
@@ -44,7 +49,6 @@ import axios from 'axios'
                     Action
                 </td>   
             </tr>
-            <br/>
             {
                 bookData.map(books => (
                     <tr className='tabledata'>
@@ -53,15 +57,17 @@ import axios from 'axios'
                         <td>{books.book_price}</td>
                         <td>{books.book_status}</td>
                         <td className='actionbutton'>
-                            <a href={`updatebook/${books._id}`} className='edit'>Edit</a>
-                        </td>
-                        <td className='actionbutton'>
-                            <a href='#' onClick={() => deletebook(books._id)} className='delete'>Delete</a>
+                            <Link to={`viewbook/${books._id}`}>
+                                <button className='viewbook'>View</button>
+                            </Link>
+                            <Link to={`updatebook/${books._id}`}>
+                                <button className='editbook'>Edit</button>
+                            </Link>
+                                <button className='deletebook' onClick={() => deletebook(books._id)}>Delete</button>
                         </td>
                     </tr>
                 ))
             }
-
         </table>
     </div>
   )
